@@ -23,6 +23,14 @@ class HashTable:
             self.data_map[index] = []
         self.data_map[index].append([key, value])
 
+    def get_item(self, key):
+        index = self.__hash(key)
+        if self.data_map[index] is not None:
+            for i in range(len(self.data_map[index])):
+                if self.data_map[index][i][0] == key:
+                    return self.data_map[index][i][1]
+        return None
+
     def __str__(self):
         display = "{"
         for i, v in enumerate(self.data_map):
@@ -36,3 +44,4 @@ my_hash.set_item("bolts", 12)
 my_hash.set_item("washers", 50)
 my_hash.set_item("screws", 10)
 print(my_hash)
+print(my_hash.get_item("screws"))
