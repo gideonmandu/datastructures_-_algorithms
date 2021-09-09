@@ -25,6 +25,14 @@ class Graph:
             return True
         return False
 
+    def remove_vertex(self, vertex):
+        if vertex in self.adj_list.keys():
+            for other_vertex in self.adj_list[vertex]:
+                self.adj_list[other_vertex].remove(vertex)
+            del self.adj_list[vertex]
+            return True
+        return False
+
     def __str__(self):
         return str({vertex: self.adj_list[vertex] for vertex in self.adj_list})
 
@@ -33,10 +41,13 @@ my_graph = Graph()
 my_graph.add_vertex('A')
 my_graph.add_vertex('B')
 my_graph.add_vertex('C')
+my_graph.add_vertex('D')
 print(my_graph)
 my_graph.add_edge('A', 'B')
-my_graph.add_edge('B', 'C')
-my_graph.add_edge('C', 'A')
+my_graph.add_edge('A', 'C')
+my_graph.add_edge('A', 'D')
+my_graph.add_edge('B', 'D')
+my_graph.add_edge('C', 'D')
 print(my_graph)
-my_graph.remove_edge('A', 'B')
+my_graph.remove_vertex('D')
 print(my_graph)
