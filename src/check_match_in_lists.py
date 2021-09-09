@@ -1,3 +1,6 @@
+from rich import print
+
+
 def item_in_common(list1: list, list2: list) -> bool:
     """Checks if two items in match O(n^2)
 
@@ -26,5 +29,10 @@ def item_in_common2(list1: list, list2: list) -> bool:
         bool: if true found match else no match
     """
     list_dict = {i: True for i in list1}
-    for j in list2:
-        return list_dict[j]
+    return any(j in list_dict for j in list2)
+
+
+l1 = [1,2,3,4,5]
+l2 = [9,8,7,6,5]
+print(f"O(n^2) {item_in_common(l1,l2)}")
+print(f"{item_in_common2(l1,l2)}")
