@@ -11,4 +11,5 @@ def bubble_sort(my_list: list) -> list:
     return my_list
 
 
-print(bubble_sort([1,5,3,6,9,3,5,0]))
+test_list = [1, 5, 3, 6, 9, 3, 5, 0]
+print(bubble_sort(test_list))
