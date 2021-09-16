@@ -79,6 +79,23 @@ class BinarySearchTree:
         traverse(self.root)
         return result
 
+    def DFS_post_order(self) -> list:
+        """Depth first search using a post order technique
+
+        Returns:
+            list: list of values from list
+        """
+        result = []
+
+        def traverse(current_node):
+            if current_node.left is not None:
+                traverse(current_node.left)
+            if current_node.right is not None:
+                traverse(current_node.right)
+            result.append(current_node.value)
+        traverse(self.root)
+        return result
+
 
 my_tree = BinarySearchTree()
 print(my_tree.root)
@@ -93,3 +110,4 @@ print(my_tree.root.right.value)
 print(my_tree.contains(1))
 print(my_tree.BFS())
 print(my_tree.DFS_pre_order())
+print(my_tree.DFS_post_order())
