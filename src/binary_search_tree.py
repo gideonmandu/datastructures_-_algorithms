@@ -43,6 +43,25 @@ class BinarySearchTree:
                 return True
         return False
 
+    def BFS(self) -> list:
+        """Breath first Search
+
+        Returns:
+            list: list of values from tree
+        """
+        current_node = self.root
+        queue = []
+        results = []
+        queue.append(current_node)
+        while queue:
+            current_node = queue.pop(0)
+            results.append(current_node.value)
+            if current_node.left is not None:
+                queue.append(current_node.left)
+            if current_node.right is not None:
+                queue.append(current_node.right)
+        return results
+
 
 my_tree = BinarySearchTree()
 print(my_tree.root)
@@ -55,3 +74,4 @@ print(my_tree.root.value)
 print(my_tree.root.left.value)
 print(my_tree.root.right.value)
 print(my_tree.contains(1))
+print(my_tree.BFS())
