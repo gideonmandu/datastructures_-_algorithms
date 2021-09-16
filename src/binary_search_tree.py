@@ -96,6 +96,26 @@ class BinarySearchTree:
         traverse(self.root)
         return result
 
+    def DFS_in_order(self) -> list:
+        """Depth first search using in order technique
+
+        Returns:
+            list: list of values from list
+        """
+        result = []
+
+        def traverse(current_node):
+            if current_node.left is not None:
+                traverse(current_node.left)
+            else:
+                result.append(current_node.value)
+            if current_node.right is not None:
+                traverse(current_node.right)
+            # else:
+            #     result.append(current_node.value)
+        traverse(self.root)
+        return result
+
 
 my_tree = BinarySearchTree()
 print(my_tree.root)
@@ -111,3 +131,4 @@ print(my_tree.contains(1))
 print(my_tree.BFS())
 print(my_tree.DFS_pre_order())
 print(my_tree.DFS_post_order())
+print(my_tree.DFS_in_order())
