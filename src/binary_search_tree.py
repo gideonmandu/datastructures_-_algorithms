@@ -107,12 +107,9 @@ class BinarySearchTree:
         def traverse(current_node):
             if current_node.left is not None:
                 traverse(current_node.left)
-            else:
-                result.append(current_node.value)
+            result.append(current_node.value)
             if current_node.right is not None:
                 traverse(current_node.right)
-            # else:
-            #     result.append(current_node.value)
         traverse(self.root)
         return result
 
