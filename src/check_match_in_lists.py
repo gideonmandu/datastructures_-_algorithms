@@ -32,7 +32,8 @@ def item_in_common2(list1: list, list2: list) -> bool:
     return any(j in list_dict for j in list2)
 
 
-l1 = [1,2,3,4,5]
-l2 = [9,8,7,6,5]
-print(f"O(n^2) {item_in_common(l1,l2)}")
-print(f"{item_in_common2(l1,l2)}")
+if __name__ == "__main__":
+    l1 = [1,2,3,4,5]
+    l2 = [9,8,7,6,5]
+    print(f"O(n^2) {item_in_common(l1,l2)}")
+    print(f"{item_in_common2(l1,l2)}")

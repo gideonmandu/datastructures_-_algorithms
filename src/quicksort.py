@@ -55,5 +55,6 @@ def quick_sort(list_to_sort):
     )
 
 
-my_list = [4, 6, 1, 7, 3, 2, 5]
-print(quick_sort(my_list))
+if __name__ == "__main__":
+    my_list = [4, 6, 1, 7, 3, 2, 5]
+    print(quick_sort(my_list))

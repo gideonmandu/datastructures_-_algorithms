@@ -45,10 +45,11 @@ class Queue:
         return f"{queue.strip(', ')}]"
 
 
-my_queue = Queue(0)
-my_queue.enqueue(1)
-my_queue.enqueue(2)
-my_queue.enqueue(3)
-print(my_queue)
-my_queue.dequeue()
-print(my_queue)
+if __name__ == "__main__":
+    my_queue = Queue(0)
+    my_queue.enqueue(1)
+    my_queue.enqueue(2)
+    my_queue.enqueue(3)
+    print(my_queue)
+    my_queue.dequeue()
+    print(my_queue)

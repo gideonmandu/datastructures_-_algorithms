@@ -130,10 +130,11 @@ class DoublyLinkedList:
         return string.strip(", ") + "]"
 
 
-my_list = DoublyLinkedList(0)
-my_list.append(1)
-my_list.append(2)
-my_list.append(3)
-print(my_list)
-print(my_list.remove(2).value)
-print(my_list)
+if __name__ == "__main__":
+    my_list = DoublyLinkedList(0)
+    my_list.append(1)
+    my_list.append(2)
+    my_list.append(3)
+    print(my_list)
+    print(my_list.remove(2).value)
+    print(my_list)

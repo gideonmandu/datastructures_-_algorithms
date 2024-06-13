@@ -13,6 +13,6 @@ def merge_sort(list_to_sort: list) -> list:
     # merge list
     return merge(merge_sort(left), merge_sort(right))
 
-
-test = [1, 9, 5, 3, 4, 2, 8, 0]
-print(merge_sort(test))
+if __name__ == "__main__":
+    test = [1, 9, 5, 3, 4, 2, 8, 0]
+    print(merge_sort(test))

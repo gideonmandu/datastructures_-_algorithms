@@ -21,4 +21,5 @@ def merge(sorted_list1: list, sorted_list2: list) -> list:
     return combined
 
 
-# print(merge([1, 2, 3, 6], [9, 4, 7, 8]))
+if __name__ == "__main__":
+    print(merge([1, 2, 3, 6], [9, 4, 7, 8]))

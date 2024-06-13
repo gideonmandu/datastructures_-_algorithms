@@ -14,5 +14,6 @@ def selection_sort(my_list: list) -> list:
     return my_list
 
 
-test_list = [1, 5, 3, 6, 9, 3, 5, 0]
-print(selection_sort(test_list))
+if __name__ == "__main__":
+    test_list = [1, 5, 3, 6, 9, 3, 5, 0]
+    print(selection_sort(test_list))

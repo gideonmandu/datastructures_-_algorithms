@@ -9,11 +9,12 @@ class Cookie:
         self.color = color
 
 
-cookie1 = Cookie('green')
-cookie2 = Cookie('yellow')
+if __name__ == "__main__":
+    cookie1 = Cookie('green')
+    cookie2 = Cookie('yellow')
 
-print(cookie1.get_color())
-print(cookie2.get_color())
-cookie1.set_color('brown')
-print(cookie1.get_color())
-print(cookie2.get_color())
+    print(cookie1.get_color())
+    print(cookie2.get_color())
+    cookie1.set_color('brown')
+    print(cookie1.get_color())
+    print(cookie2.get_color())

@@ -6,5 +6,5 @@ def factorial(n):
         return 1
     return n * factorial(n-1)
 
-
-print(factorial(4))
+if __name__ == "__main__":
+    print(factorial(4))

@@ -15,4 +15,5 @@ def fn_one():
     print("one")
 
 
-fn_one()
+if __name__ == "__main__":
+    fn_one()

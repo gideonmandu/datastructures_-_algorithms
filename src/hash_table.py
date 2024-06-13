@@ -46,11 +46,12 @@ class HashTable:
         return display.strip(", ") + "}"
 
 
-my_hash = HashTable()
-print(my_hash)
-my_hash.set_item("bolts", 12)
-my_hash.set_item("washers", 50)
-my_hash.set_item("screws", 10)
-print(my_hash)
-print(my_hash.get_item("screws"))
-print(my_hash.keys())
+if __name__ == "__main__":
+    my_hash = HashTable()
+    print(my_hash)
+    my_hash.set_item("bolts", 12)
+    my_hash.set_item("washers", 50)
+    my_hash.set_item("screws", 10)
+    print(my_hash)
+    print(my_hash.get_item("screws"))
+    print(my_hash.keys())

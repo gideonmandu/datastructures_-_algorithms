@@ -119,13 +119,13 @@ class LinkedList:
             print(temp.value)
             temp = temp.next
 
-
-my_linked_list = LinkedList(2)
-my_linked_list.append(3)
-my_linked_list.prepend(1)
-my_linked_list.append(4)
-my_linked_list.print_list()
-# my_linked_list.set_value(0, 0)
-# my_linked_list.insert(1, 10)
-my_linked_list.reverse()
-my_linked_list.print_list()
+if __name__ == "__main__":
+    my_linked_list = LinkedList(2)
+    my_linked_list.append(3)
+    my_linked_list.prepend(1)
+    my_linked_list.append(4)
+    my_linked_list.print_list()
+    # my_linked_list.set_value(0, 0)
+    # my_linked_list.insert(1, 10)
+    my_linked_list.reverse()
+    my_linked_list.print_list()
